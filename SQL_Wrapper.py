@@ -57,7 +57,7 @@ def sendEmail(mail_text):
 
     SMTP_MAIL_SERVER = 'abcde.domain.com'
     NOREPLY_ADDR = 'noreply@domain.com'
-    MAIL_SUBJECT = 'cncopy_db SQL Query - Email Notification Test'
+    MAIL_SUBJECT = 'db SQL Query - Email Notification Test'
 
     # Construct the message object
     MailMessage_Ob = MIMEText(mail_text)
@@ -84,7 +84,7 @@ def run_Query(query):
     data = ""
     config = ConfigParser()
     # Reading the database config file for database information
-    config.read('/users/abhainav/.dbConfig.cfg')
+    config.read('/users/abhinav/.dbConfig.cfg')
     db_hostname = config.get('database_information', 'db_hostname')
     db_name = config.get('database_information', 'db_name')
     db_username = config.get('database_information', 'db_username')
